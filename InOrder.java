@@ -4,6 +4,22 @@
  */
 public class InOrder {
 	public static void main (String[] args) {
-		//// Write your code here
+		//Generates random numbers equal or bigger then random_0
+		
+		int random = (int)(Math.random()*10) ;
+		System.out.print( random + " " );
+		int last = random ;
+		boolean stopper = true;
+		
+		while (stopper == true){
+			random = (int)(Math.random()*10);
+			if (random >= last ){
+				System.out.print( random + " " );
+				last = random;
+			}
+			else{
+			stopper = false;
+			}
+		}
 	}
 }
