@@ -13,7 +13,45 @@ public class OneOfEachStats {
 		int T = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
+        Random generator = new Random(seed);
+		
+		double average = 0.0; //the average family state
+		int girl = 0; // number of girls
+		int boy = 0; //number of boys
+		int kids = 0; //sum of the kids
+		int twoChild = 0; //family's number with 2 children
+		int threeChild = 0; //family's number with 3 children
+		int fourChild = 0;//family's number with 4 children or more
+		
+		//make random family T times
+		int i = 1;
+		while( i <= T ){
+			while ( boy == 0 || girl == 0){
+				double rnd = generator.nextDouble()
+				if ( rnd > 0.5 ){girl++ ;}
+				else {boy++ ;}
+				kids = girl + boy ;
+				}
+				average = average + kids ;
+			if( kids == 2 ){twoChild++ ;}
+			else if( kids == 3 ){threeChild++ ;}
+			else {fourChild++ ;}
+
+			i++ ;
+		}
+		
+		//print the result and the average
+		average = average/(double)T ;
+		System.out.println( "Average: " + average + " children to get at least one of each gender." );
+		System.out.println( "Number of families with 2 children: " + twoChild );
+		System.out.println( "Number of families with 3 children: " + threeChild );
+		System.out.println( "Number of families with 4 or more children: " + fourChild );
+		
+		//check which is the common family kids number
+		if ( twoChild > threeChild && twoChild > fourChild ){System.out.println( "The most common number of children is 2 children." );}
+		else if ( threeChild > twoChild && threeChild > fourChild ){System.out.println( "The most common number of children is 3 children." );}
+		else {System.out.println( "The most common number of children is 4 or more." );}
+  
 		
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();
