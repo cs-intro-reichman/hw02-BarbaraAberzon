@@ -6,6 +6,7 @@ public class Reverse {
 	public static void main (String[] args){
 		String word = (args[0]) ;
 		int length = word.length();
+		char middle ;
 		
 		//prints the word backwards
 		int i = length-1 ;
@@ -16,10 +17,10 @@ public class Reverse {
 		
 		//print the middle char
 		if (length%2 == 0){
-			char middle = word.charAt( (length/2)-1 );
+			middle = word.charAt( (length/2)-1 );
 		}
 		else {
-			char middle = word.charAt( length/2 );
+			middle = word.charAt( length/2 );
 			}
 			
 		System.out.println( "" );
