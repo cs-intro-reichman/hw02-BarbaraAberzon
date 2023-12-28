@@ -12,9 +12,11 @@ public class DamkaBoard {
 				System.out.print( " " + damka );
 			}
 			else {
-            System.out.print( damka ) ;
+            System.out.print( damka );
 			}
 			System.out.println( "" );
 			i++;
+		}
 	}
 }
+
