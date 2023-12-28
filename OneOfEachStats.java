@@ -27,7 +27,7 @@ public class OneOfEachStats {
 		int i = 1;
 		while( i <= T ){
 			while ( boy == 0 || girl == 0){
-				double rnd = generator.nextDouble()
+				double rnd = generator.nextDouble();
 				if ( rnd > 0.5 ){girl++ ;}
 				else {boy++ ;}
 				kids = girl + boy ;
