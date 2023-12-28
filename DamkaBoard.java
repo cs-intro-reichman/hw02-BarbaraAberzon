@@ -9,6 +9,7 @@ public class DamkaBoard {
 			for(int j = 1 ; j <= x ; j++){
 				if ( j < x ) {System.out.print( "* " );}
 				else {System.out.print( "*" );}
+			}
 			System.out.println( "" );
 			if ( i%2 == 1 ){//if the line's number is even -> than add space in the start
 				System.out.print( " " );
@@ -16,5 +17,5 @@ public class DamkaBoard {
 		}
 	}
 }
-}
+
 
