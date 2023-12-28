@@ -15,7 +15,7 @@ public class OneOfEachStats {
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);
 		
-		double average = 0.0; //the average family state
+		double totalKids = 0.0; //the total kida for average
 		int girl = 0; // number of girls
 		int boy = 0; //number of boys
 		int kids = 0; //sum of the kids
@@ -32,7 +32,7 @@ public class OneOfEachStats {
 				else {boy++ ;}
 				kids = girl + boy ;
 				}
-				average = average + kids ;
+				totalKids += kids;	
 			if( kids == 2 ){twoChild++ ;}
 			else if( kids == 3 ){threeChild++ ;}
 			else {fourChild++ ;}
@@ -41,7 +41,7 @@ public class OneOfEachStats {
 		}
 		
 		//print the result and the average
-		average = average/(double)T ;
+		double average = totalKids/T ;
 		System.out.println( "Average: " + average + " children to get at least one of each gender." );
 		System.out.println( "Number of families with 2 children: " + twoChild );
 		System.out.println( "Number of families with 3 children: " + threeChild );
